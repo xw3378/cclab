@@ -85,7 +85,20 @@ function draw() {
   car5();
   space();
   bigCat();
-  console.log(mouseX, mouseY);
+
+  
+
+
+
+
+
+
+
+
+
+
+
+  //console.log(mouseX, mouseY);
 }
 
 function building1() {
@@ -297,16 +310,28 @@ function space() {
 
 function bigCat() {
   push();
-
+  translate(mouseX-200,mouseY-400)
   fill(214, 190, 188);
   stroke(230, 130, 94);
   strokeWeight(4);
-
-  triangle(140, 350, 153, 410, 187, 367);
+  if(keyIsPressed){
+    if(key=="c"){
+    triangle(140, 350, 153, 410, 187, 367);
   triangle(368, 345, 315, 370, 350, 407); //ears
+    }
+  }
   circle(255, 465, 250); //face
   noStroke();
-  fill(255);
+  if(keyIsPressed){
+    if(key=="r"){
+      fill(255)
+    }else{
+      fill(100, 52, 235)
+    }
+    
+    
+  }
+  ;
   circle(200, 435, 30);
   circle(310, 435, 30);
   fill(13, 12, 12);
@@ -326,3 +351,5 @@ function bigCat() {
 
   pop();
 }
+
+
