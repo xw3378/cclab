@@ -1,0 +1,22 @@
+html, body {
+  margin: 0;
+  padding: 0;
+}
+canvas {
+  display: block;
+}
+p{
+ 
+  background-color: blanchedalmond;
+}
+.description{
+  text-decoration: underline;
+}
+#canvasWrapper{
+  background-color: aquamarine;
+  outline: 2px green ;
+}
+.captionWrapper{
+  margin: 30px
+  outline 1px black solid
+}
