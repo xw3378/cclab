@@ -1,19 +1,23 @@
 .description{
     
-    color: rgb(102, 108, 189)
+    color: white
    
      }
      #canvasWrapper{
        text-align: center;
-       
      
      }
      h1{
     text-align: center;
     
-    font-size: 60px;
+    font-size: 80px;
      }
      body{
-      background-color:  rgb(128, 178, 217)
+      background-color:  rgb(white)
      }
-     
+     p{
+      color: white;
+     }
+     a{
+      color: aliceblue;
+     }

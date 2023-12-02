@@ -1,0 +1,16 @@
+.description{
+    text-align: center;
+    color: darkkhaki;
+}
+.imageWrapper {
+    width: 100%;
+    background-color: white;
+ 
+ }
+ img {
+    /* text-align: center; */
+    width: 50%;
+    /* margin-left: 100px; */
+    margin:auto;
+    display: block;
+ }

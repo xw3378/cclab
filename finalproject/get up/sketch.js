@@ -5,14 +5,14 @@ let darkTransparency = 95;
 let darkSpeed = 1;
 let gameStarted = false;
 
-let meX, meY; 
-let foodX, foodY; 
-let foodSize = 20; 
-let score = 0; 
+let meX, meY;
+let foodX, foodY;
+let foodSize = 20;
+let score = 0;
 
 function setup() {
-  let cnv =  createCanvas(800,800);
-    cnv.parent("canvasWrapper");
+  let cnv = createCanvas(800, 800);
+  cnv.parent("canvasWrapper");
   meX = width / 2;
   meY = height / 2;
   placeFood();
@@ -65,6 +65,8 @@ function draw() {
   } else if (gameStarted) {
     displayGame();
   }
+  stroke(255)
+  text("Press it!",669,280)
 }
 
 function curtains() {
@@ -106,17 +108,26 @@ function displayGame() {
 }
 
 function moveMe() {
-  if (keyIsDown(LEFT_ARROW)) {
+  if (keyIsPressed){
+    if(key=="a")
+   {
     meX -= 5;
   }
-  if (keyIsDown(RIGHT_ARROW)) {
-    meX += 5;
+}
+  if (keyIsPressed) {
+   if(key=="d"){
+     meX += 5;
+   }
   }
-  if (keyIsDown(UP_ARROW)) {
-    meY -= 5;
+  if (keyIsPressed) {
+   if(key=="w"){
+    meY -= 5
+   } 
   }
-  if (keyIsDown(DOWN_ARROW)) {
+  if (keyIsPressed) {
+   if(key=="s"){
     meY += 5;
+   } 
   }
 
   meX = constrain(meX, 0, width);
@@ -127,14 +138,17 @@ function drawMe() {
   push();
   translate(meX, meY);
   stroke(5, 5, 5);
-  noFill();
+ fill("pink")
   circle(0, 0, 30);
   fill(5, 5, 5);
   circle(-10, -5, 5);
   circle(10, -5, 5);
   noFill();
   ellipse(0, 10, 10, 7);
-  line(0, 25, 0, 40);
+  noStroke()
+  fill(random(180,230), 161, 230)
+ ellipse(0,30, 25, 30);
+
   pop();
 }
 
@@ -153,7 +167,13 @@ function checkCollision() {
   if (d < 20) {
     score++;
     placeFood();
+    if (score == 5) {
+      // console.log(score)
+      window.location.href = "../After%20get%20up"
+    }
+
   }
+
 }
 
 function displayScore() {

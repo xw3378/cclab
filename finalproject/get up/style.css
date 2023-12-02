@@ -7,7 +7,7 @@
   #canvasWrapper{
     text-align: center;
   
-   
+  ;
   }
   h1{
  text-align: center;
@@ -17,6 +17,10 @@
   body{
    background-color:  rgb(128, 178, 217)
   }
-  
-
+  p{
+    text-align: center;
+    text-size-adjust: 50px;
+    color: white;
+    background-color: cornflowerblue;
+  }
   
